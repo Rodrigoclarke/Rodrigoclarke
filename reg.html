@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pergunta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .resposta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .resposta-btn:hover {
+            background-color: #45a049;
+        }
+
+        .mensagem {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .mensagem-parabens {
+            color: #4CAF50;
+        }
+
+        .mensagem-errou {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Patrick é pai da índia Tainá?</h1>
+
+    <button class="resposta-btn" id="sim-btn">Sim</button>
+    <button class="resposta-btn" id="nao-btn">Não</button>
+
+    <div class="mensagem" id="mensagem-resposta"></div>
+
+    <script>
+        // Adicionando evento de clique aos botões
+        document.getElementById('sim-btn').addEventListener('click', function() {
+            // Exibir mensagem de parabéns
+            exibirMensagem('Parabéns, você acertou!');
+        });
+
+        document.getElementById('nao-btn').addEventListener('click', function() {
+            // Exibir mensagem de erro
+            exibirMensagem('Ops, você errou!');
+        });
+
+        // Função para exibir mensagens de resposta
+        function exibirMensagem(mensagem) {
+            document.getElementById('mensagem-resposta').innerText = mensagem;
+        }
+    </script>
+
+</body>
+</html>
